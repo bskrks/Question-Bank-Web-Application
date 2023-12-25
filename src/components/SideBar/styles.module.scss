@@ -1,0 +1,33 @@
+.sideBarWrapper {
+    background-color: white;
+    //width: 97px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+}
+
+.optionsList {
+    padding: 0;
+    margin: 10px 33px 45px;
+}
+
+.appList {
+    padding: 0;
+    margin:0 33px 40px;
+}
+
+.options {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.logo {
+    width: 43px;
+    height: 42px;
+    margin: 20px 24px 30px 29px;
+}
+
+.message {
+    margin: 0 33px;
+}

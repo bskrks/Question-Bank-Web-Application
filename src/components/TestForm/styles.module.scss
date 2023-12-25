@@ -1,0 +1,31 @@
+.description {
+
+}
+
+.question {
+    font-weight: bold;
+}
+
+.questionWrapper {
+    width: 916px;
+    height: auto;
+    border-radius: 10px;
+    background: var(--light, #FFF);
+    box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.04);
+}
+
+.formWrapper {
+}
+
+.titleWrapper {
+
+    margin: 30px 0;
+
+    .arrow {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        margin: 0;
+    }
+}
