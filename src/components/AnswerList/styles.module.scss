@@ -1,0 +1,25 @@
+.listWrapper {
+    background-color: white;
+    margin: 130px 0 0 50px;
+    height: auto;
+
+    .options {
+        display: flex;
+        list-style-type: none;
+        margin-bottom: 5px;
+    
+        .number {
+            margin: 0 10px;
+        }
+    
+        .option {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+    }
+}
+
+
+
+

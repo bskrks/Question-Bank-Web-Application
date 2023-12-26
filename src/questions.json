@@ -1,0 +1,284 @@
+{
+    "questions": [
+        {
+            "number": "1",
+            "description": "Şair, şiirlerinde hava alacak boşluk bırakmıyor, her şeyi söylüyor. Okuyucunun adına da kendisi konuşuyor. Bunun için dizleri hayalinizi perdeliyor, soluğunuzu kesiyor, sizi boğuyor.",
+            "question": "Bu parçada geçen “hava alacak boşluk bırakmamak” sözüyle anlatılmak istenen aşağıdakilerden hangisidir?",
+            "correctAnswer": "B",
+            "options": [
+                {
+                    "optionName": "A",
+                    "optionDescripton": "Görgüsüzce davranmasaydın, seni böyle dışlamazdık."
+                },
+                {
+                    "optionName": "B",
+                    "optionDescripton": "Ekip arkadaşlarıyla ters düşmeyen, uyumlu bir teknisyendi."
+                },
+                {
+                    "optionName": "C",
+                    "optionDescripton": "Her şeyin kendisinin olmasını isteyen açgözlü biriydi."
+                },
+                {
+                    "optionName": "D",
+                    "optionDescripton": "Bir dediği bir dediğini tutmayan tutarsız bir gazeteciydi."
+                },
+                {
+                    "optionName": "E",
+                    "optionDescripton": "Ağzında bakla ıslanmayan boşboğaz adamın tekiydi o."
+                }
+            ]
+        },
+        {
+            "number": "2",
+            "description": "Yazarlık serüvenimin en büyük destekçisi elbette çok kıymetli öğretmenimdir. O, isabetli yorum ve kritikleriyle daha iyi eser vermemi mümkün kılan kişidir.",
+            "question": "Aşağıdakilerden hangisi bu parçadaki sözcüklerden herhangi birinin yerine kullanılamaz?",
+            "correctAnswer": "C",
+            "options": [
+                {
+                    "optionName": "A",
+                    "optionDescripton": "Değerli"
+                },
+                {
+                    "optionName": "B",
+                    "optionDescripton": "Uygun"
+                },
+                {
+                    "optionName": "C",
+                    "optionDescripton": "Olasılık"
+                },
+                {
+                    "optionName": "D",
+                    "optionDescripton": "Eleştiri"
+                },
+                {
+                    "optionName": "E",
+                    "optionDescripton": "Kıymetli"
+                }
+            ]
+        },
+        {
+            "number": "3",
+            "description": "Hemen başlıyorum, akşama kadar bitireceğim.",
+            "question": "cümlesindeki fiillerin zamanı aşağıdakilerin hangisinde sırasıyla verilmiştir?",
+            "correctAnswer": "A",
+            "options": [
+                {
+                    "optionName": "A",
+                    "optionDescripton": "Şimdiki zaman - Gelecek zaman"
+                },
+                {
+                    "optionName": "B",
+                    "optionDescripton": "Şimdiki zaman - Geniş zaman"
+                },
+                {
+                    "optionName": "C",
+                    "optionDescripton": "Gelecek zaman - Görülen geçmiş zaman"
+                },
+                {
+                    "optionName": "D",
+                    "optionDescripton": "Gelecek zaman - Geniş zaman"
+                },
+                {
+                    "optionName": "E",
+                    "optionDescripton": "Şimdiki zaman - Şimdiki zaman"
+                }
+            ]
+        },
+        {
+            "number": "4",
+            "description": "Ömrü boyunca başkasının yardımına ihtiyaç duymadan güçlü bir biçimde yaşamış, - - - - bir insan olmayı başarmıştır.",
+            "question": "Bu cümlede boş bırakılan yere aşağıdakilerden hangisi getirilirse deyim, açıklamasıyla birlikte verilmiş olur?",
+            "correctAnswer": "A",
+            "options": [
+                {
+                    "optionName": "A",
+                    "optionDescripton": "ayakları üstünde duran"
+                },
+                {
+                    "optionName": "B",
+                    "optionDescripton": "burnu havada olan"
+                },
+                {
+                    "optionName": "C",
+                    "optionDescripton": "ele avuca sığmayan"
+                },
+                {
+                    "optionName": "D",
+                    "optionDescripton": "parmakla gösterilen"
+                },
+                {
+                    "optionName": "E",
+                    "optionDescripton": "mutlu olan"
+                }
+            ]
+        },
+        {
+            "number": "5",
+            "description": "Talihsizlik, insana hakiki dostlarını gösterir.",
+            "question": "Bu özdeyişle anlamca aynı doğrultuda olan atasözü aşağıdakilerden hangisidir?",
+            "correctAnswer": "D",
+            "options": [
+                {
+                    "optionName": "A",
+                    "optionDescripton": "Dost bin ise azdır, düşman bir ise çoktur."
+                },
+                {
+                    "optionName": "B",
+                    "optionDescripton": "Dost dostun ayıbını yüzüne söyler."
+                },
+                {
+                    "optionName": "C",
+                    "optionDescripton": "Dostun attığı taş baş yarmaz."
+                },
+                {
+                    "optionName": "D",
+                    "optionDescripton": "Dost kara günde belli olur."
+                },
+                {
+                    "optionName": "E",
+                    "optionDescripton": "Dost, dostun eğerlenmiş atıdır."
+                }
+            ]
+        },
+        {
+            "number": "6",
+            "description": "Varlığı bir şey kazandırmayanın, yokluğu bir şey kaybettirmez.",
+            "question": "Bu cümledeki “varlık-yokluk, kazandırmak-kaybettirmek” sözcükleri arasındaki anlam ilişkisinin benzeri aşağıdakilerin hangisinde vardır?",
+            "correctAnswer": "B",
+            "options": [
+                {
+                    "optionName": "A",
+                    "optionDescripton": "Gün doğmadan neler doğar, derdi babaannem."
+                },
+                {
+                    "optionName": "B",
+                    "optionDescripton": "Hayat gülümsedikçe ve umut ettikçe yaşamaya değer."
+                },
+                {
+                    "optionName": "C",
+                    "optionDescripton": " Karanlığa kızacağınıza aydınlık için çaba sarf edin."
+                },
+                {
+                    "optionName": "D",
+                    "optionDescripton": "İnsan kendi değerini ancak çalışarak koruyabilir."
+                },
+                {
+                    "optionName": "E",
+                    "optionDescripton": "Hayat paylaşınca güzel."
+                }
+            ]
+        },
+        {
+            "number": "7",
+            "description": "Keşke bugün çıkmasaydım dışarı, diye söylendi küçük kaplumbağa. Hava öyle sıcaktı, güneş öyle yakıcıydı ki dağı taşı eritiyordu. Ter içinde kaldı kaplumbağa, can sıkıntısıyla yürümeye başladı.",
+            "question": "Bu parçada aşağıdaki söz sanatlarından hangisi yoktur?",
+            "correctAnswer": "C",
+            "options": [
+                {
+                    "optionName": "A",
+                    "optionDescripton": "Kişileştirme"
+                },
+                {
+                    "optionName": "B",
+                    "optionDescripton": "Abartma"
+                },
+                {
+                    "optionName": "C",
+                    "optionDescripton": "Karşıtlık"
+                },
+                {
+                    "optionName": "D",
+                    "optionDescripton": "Konuşturma"
+                },
+                {
+                    "optionName": "E",
+                    "optionDescripton": "Kinaye"
+                }
+            ]
+        },
+        {
+            "number": "8",
+            "description": "Uçsuz bucaksız bir vadide yürüyordum. Köpüren sularıyla vadideki nehir, taç şeklindeki karlarıyla karşımda duran dağlar tıpkı benim gibi özgürdü. Geniş çayırlarda dolaşırken güneşi iliklerime kadar hissettim",
+            "question": "Bu metinde aşağıdaki varlıklardan hangileri kişileştirilmiştir?",
+            "correctAnswer": "A",
+            "options": [
+                {
+                    "optionName": "A",
+                    "optionDescripton": "Nehir - dağlar"
+                },
+                {
+                    "optionName": "B",
+                    "optionDescripton": "Sular - güneş"
+                },
+                {
+                    "optionName": "C",
+                    "optionDescripton": "Nehir - çayırlar"
+                },
+                {
+                    "optionName": "D",
+                    "optionDescripton": "Güneş - karlar"
+                },
+                {
+                    "optionName": "E",
+                    "optionDescripton": "Dağlar - sular"
+                }
+            ]
+        },
+        {
+            "number": "9",
+            "description": "Öğretmenimin tavsiye ettiği romanı - - - - okudum.",
+            "question": "Bu cümlede boş bırakılan yere aşağıdaki sözcüklerden hangisi getirilirse fiil, zaman yönünden belirtilmiş olur?",
+            "correctAnswer": "A",
+            "options": [
+                {
+                    "optionName": "A",
+                    "optionDescripton": "tatilde"
+                },
+                {
+                    "optionName": "B",
+                    "optionDescripton": "evde"
+                },
+                {
+                    "optionName": "C",
+                    "optionDescripton": "birkaç kez"
+                },
+                {
+                    "optionName": "D",
+                    "optionDescripton": "heyecanla"
+                },
+                {
+                    "optionName": "E",
+                    "optionDescripton": "çok az"
+                }
+            ]
+        },
+        {
+            "number": "10",
+            "description": "Ek fiiller, isim soylu kelimelerin sonuna eklenerek bu kelimelerin cümle içerisinde yüklem olarak kullanılmasını sağlar",
+            "question": "Buna göre aşağıdaki cümlelerin hangisinde ek fiil yoktur?",
+            "correctAnswer": "A",
+            "options": [
+                {
+                    "optionName": "A",
+                    "optionDescripton": "Trabzon’dan Ankara’ya on beş saatte vardı."
+                },
+                {
+                    "optionName": "B",
+                    "optionDescripton": "Yıllar önce sahiplendiğim bir köpeğim vardı."
+                },
+                {
+                    "optionName": "C",
+                    "optionDescripton": "Eskiden oturduğumuz sokakta macuncu vardı."
+                },
+                {
+                    "optionName": "D",
+                    "optionDescripton": "Yaşayacağımız koskoca bir ömür vardı."
+                },
+                {
+                    "optionName": "E",
+                    "optionDescripton": "Her gün onu giydiği için ayakkabısı eskimişti."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 40 40" xml:space="preserve">
+<desc>Created with Fabric.js 3.6.6</desc>
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 20.5 20.5)"  >
+<circle style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(3,169,241); fill-rule: nonzero; opacity: 1;"  cx="0" cy="0" r="20" />
+</g>
+<g transform="matrix(1 0 0 1 21.16 20.26)"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;"  transform=" translate(-5.17, -6.24)" d="M 0.518438 12 V 0.48 H 4.19044 C 4.28644 0.48 4.47577 0.482666 4.75844 0.488 C 5.04644 0.493333 5.32377 0.511999 5.59044 0.544 C 6.50244 0.661333 7.2731 0.986666 7.90244 1.52 C 8.5371 2.048 9.0171 2.72267 9.34244 3.544 C 9.66777 4.36533 9.83044 5.264 9.83044 6.24 C 9.83044 7.216 9.66777 8.11467 9.34244 8.936 C 9.0171 9.75733 8.5371 10.4347 7.90244 10.968 C 7.2731 11.496 6.50244 11.8187 5.59044 11.936 C 5.3291 11.968 5.05444 11.9867 4.76644 11.992 C 4.47844 11.9973 4.28644 12 4.19044 12 H 0.518438 Z M 2.47844 10.184 H 4.19044 C 4.35044 10.184 4.5531 10.1787 4.79844 10.168 C 5.0491 10.1573 5.27044 10.1333 5.46244 10.096 C 6.00644 9.99467 6.4491 9.752 6.79044 9.368 C 7.13177 8.984 7.38244 8.51733 7.54244 7.968 C 7.70777 7.41867 7.79044 6.84267 7.79044 6.24 C 7.79044 5.616 7.70777 5.02933 7.54244 4.48 C 7.3771 3.93067 7.1211 3.46933 6.77444 3.096 C 6.4331 2.72267 5.99577 2.48533 5.46244 2.384 C 5.27044 2.34133 5.0491 2.31733 4.79844 2.312 C 4.5531 2.30133 4.35044 2.296 4.19044 2.296 H 2.47844 V 10.184 Z" stroke-linecap="round" />
+</g>
+</svg>
