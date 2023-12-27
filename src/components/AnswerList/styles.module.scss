@@ -1,21 +1,91 @@
-.listWrapper {
-    background-color: white;
-    margin: 130px 0 0 50px;
-    height: auto;
+.testWrapper {
+    display: flex;
+    flex-direction: column;
 
-    .options {
+    .buttonWrapper {
         display: flex;
-        list-style-type: none;
-        margin-bottom: 5px;
-    
-        .number {
-            margin: 0 10px;
+        margin-bottom: 15px;
+    }
+
+    .listWrapper {
+        background-color: white;
+        margin: 0 20px;
+        height: auto;
+
+        .lessonWrapper {
+            display: flex;
+            margin-top: 18px;
+            margin-left: 15px;
+
+            .lessonIcon {
+                margin-right: 12px;
+            }
+
+            .titleWrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .title {
+                    margin: 0;
+                    color: #1E2029;
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 22px;
+                }
+        
+                .total {
+                    margin: 0;
+                    color: #607B96;
+                    font-family: Manrope;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
         }
-    
-        .option {
-            width: 30px;
-            height: 30px;
-            margin-right: 5px;
+
+        .list {
+            padding: 0;
+
+            .options {
+                display: flex;
+                align-items: center;
+                list-style-type: none;
+                margin-bottom: 5px;
+                margin: 0 13px 4px 15px;
+                border-radius: 10px;
+                background: rgba(3, 169, 241, 0.07);
+            
+                .number {
+                    color: #1E2029;
+                    font-family: Manrope;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 22px;
+                    margin: 0 10px;
+                }
+
+                .options:last-child {
+                    .number {
+                        margin: 0 8px;
+                    }
+                }
+            
+                .option {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                }
+        
+                .option:last-child {
+                    margin-right: 0;
+                }
+            }
         }
     }
 }

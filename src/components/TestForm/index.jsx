@@ -23,8 +23,16 @@ function TestForm () {
             </div>
             <div className={styles.questionWrapper}>
                 <form className={styles.formCont} onSubmit={(e)=> handleSubmit(e)}>
-                    <div className={styles.questionNumber}>
-                        <p className={styles.questionNumberText}>Soru: Türkçe #7</p>
+                    <div className={styles.questionBox}>
+                        <div className={styles.questionNumber}>
+                            <p className={styles.questionNumberText}>Soru: Türkçe #7</p>
+                        </div>
+                        <div className={styles.buttonWrapper}>
+                            <img src="./icons/brush.svg" alt="" />
+                            <img src="./icons/zoom-in.svg" alt="" />
+                            <img src="./icons/zoom-out.svg" alt="" />
+                            <img src="./icons/alert.svg" alt="" />
+                        </div>
                     </div>
                     <p className={styles.description}>“Şair, şiirlerinde hava alacak boşluk bırakmıyor, 
                     her şeyi söylüyor. Okuyucunun adına da kendisi konuşuyor. Bunun için dizleri hayalinizi 

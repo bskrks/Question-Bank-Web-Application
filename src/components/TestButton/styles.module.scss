@@ -1,0 +1,27 @@
+.buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 50px;
+    background-color: #F7D54C;
+    border-radius: 8px;
+
+    .buttonIcon {
+        width: 30px;
+        height: 30px;
+        margin: 7px;
+    }
+
+    .buttonText {
+        color: #2C3E50;
+        text-align: right;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+        margin-right: 10px;
+    }
+}

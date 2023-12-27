@@ -12,6 +12,8 @@
         }
     }
 
+
+
     .questionWrapper {
         width: 800px;
         height: auto;
@@ -20,21 +22,36 @@
         box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.04);
         padding: 20px;
 
-        .questionNumber {
-            display: inline-block;
-            border-radius: 5px;
-            padding: 5px 8px 7px;
-            background-color: #2C3E50;
+        .questionBox {
+            display: flex;
+            justify-content: space-between;
 
-            .questionNumberText {
-                margin: 0;
-                color: #FFF;
-                text-align: center;
-                font-family: Manrope;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 800;
-                line-height: normal;
+            .buttonWrapper {
+                display: flex;
+
+                img {
+                    margin-right: 5px;
+                }
+            }
+    
+            .questionNumber {
+                display: flex;
+                align-items: center;
+                border-radius: 5px;
+                padding: 5px 8px 7px;
+                height: 28px;
+                background-color: #2C3E50;
+    
+                .questionNumberText {
+                    margin: 0;
+                    color: #FFF;
+                    text-align: center;
+                    font-family: Manrope;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: normal;
+                }
             }
         }
 
