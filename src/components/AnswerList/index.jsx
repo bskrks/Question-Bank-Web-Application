@@ -18,8 +18,34 @@ import selectedE from '../../images/dark-e.svg'
 import "@fontsource/manrope";
 import styles from './styles.module.scss'
 
-function AnswerList() {
-    console.log("data",data.questions.length);
+function AnswerList(props) {
+    const response = props?.res ;
+
+    const responseOptions = ["A", "B", "C", "D", "E"];
+    const unselectedSources = [unselectedA, unselectedB, unselectedC, unselectedD, unselectedE];
+    const selectedSources = ["selectedA","selectedB","selectedC","selectedD","selectedE"];
+
+    const filteredOptions = responseOptions.filter((item) => item !== response);
+
+    console.log("filteredOptions",filteredOptions);
+
+    console.log("response buse ", response)
+    const selectedImg = {
+        "A" : selectedA,
+        "B" : selectedB,
+        "C" : selectedC,
+        "D" : selectedD,
+        "E" : selectedE,
+    }
+
+    const unselectedImg = {
+        "A" : unselectedA,
+        "B" : unselectedB,
+        "C" : unselectedC,
+        "D" : unselectedD,
+        "E" : unselectedE,
+    }
+
     return (
         <div className={styles.testWrapper}>
             <div className={styles.buttonWrapper}>
@@ -38,11 +64,19 @@ function AnswerList() {
                     {data.questions.map((item,i) => (
                         <li className={styles.options}>
                             <p className={styles.number}>{i+1}.Soru</p>
-                            <img src={unselectedA} alt="A" className={styles.option} />
-                            <img src={unselectedB} alt="B" className={styles.option} />
-                            <img src={unselectedC} alt="C" className={styles.option} />
-                            <img src={unselectedD} alt="D" className={styles.option} />
-                            <img src={unselectedE} alt="E" className={styles.option} />
+                            {/* {filteredOptions.map((item) => {
+                                response ? <img src={selectedImg[response]} alt="" className={styles.option} /> : 
+                                            <img src={unselectedImg[item]} alt="" className={styles.option} />})
+                            } */}
+                            {
+                                responseOptions.map((item) => {
+                                    if(item !== response) {
+                                        return (<img src={unselectedImg[item]} alt="" className={styles.option} />)
+                                    } else if(item === response){
+                                        return (<img src={selectedImg[response]} alt="" className={styles.option} />)
+                                    }
+                                })
+                            }
                         </li>
                     ))}
                 </ul>

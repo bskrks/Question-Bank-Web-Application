@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import TestForm from '../src/components/TestForm/index.jsx';
 import SideBar from './components/SideBar/index.jsx';
 import AnswerList from './components/AnswerList/index.jsx';
 
 function App() {
+  const [response, setResponse] = useState();
+
+  const responseFunction  = (data) => {
+    setResponse(data);
+    console.log("response",data);
+  }
+
   return (
     <div className="app">
       <SideBar />
-      <TestForm />
-      <AnswerList />
+      <TestForm  resFunc={responseFunction} />
+      <AnswerList res = {response} />
     </div>
   );
 }

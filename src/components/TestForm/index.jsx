@@ -1,14 +1,52 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss'
-import { Input, Radio, Space } from 'antd';
+import data from '../../questions.json'
 
-function TestForm () {
+import { Radio, Space, Button } from 'antd';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 
+
+function TestForm (props) {
+
+    const questionData = data.questions;
+
+    const [currentNumber, setCurrentNumber] = useState(1);
     const [responseValue, setResponseValue] = useState(1);
+    
+    const imagesSources = ["./icons/brush.svg","./icons/zoom-in.svg","./icons/zoom-out.svg","./icons/alert.svg"];
+    const optionLetters = ["A", "B", "C", "D", "E"]; 
+
+    const antButton = (icon, clickFunc, text) => {
+        return (<Button
+                type="primary"
+                icon={icon}
+                onClick={clickFunc}
+                className={styles.prevNextButton}
+                >
+                    {text}
+                </Button>);
+    }
+
+    const previousQuestion = () =>{
+        if(currentNumber > 1) {
+            setCurrentNumber(currentNumber-1);
+        }else if(currentNumber === 1) {
+            setCurrentNumber(1);
+        }
+    }
+
+    const nextQuestion = () =>{
+        if(currentNumber < 10) {
+            setCurrentNumber(currentNumber+1);
+        }else if(currentNumber == 10) {
+            setCurrentNumber(1);
+        }
+    }
 
     const onChange = (e) => {
         console.log('radio checked', e.target.value);
         setResponseValue(e.target.value);
+        props.resFunc(e.target.value);
     };
 
     const handleSubmit = async(e) => {
@@ -25,30 +63,28 @@ function TestForm () {
                 <form className={styles.formCont} onSubmit={(e)=> handleSubmit(e)}>
                     <div className={styles.questionBox}>
                         <div className={styles.questionNumber}>
-                            <p className={styles.questionNumberText}>Soru: Türkçe #7</p>
+                            <p className={styles.questionNumberText}>Soru: Türkçe  # {currentNumber}</p>
                         </div>
                         <div className={styles.buttonWrapper}>
-                            <img src="./icons/brush.svg" alt="" />
-                            <img src="./icons/zoom-in.svg" alt="" />
-                            <img src="./icons/zoom-out.svg" alt="" />
-                            <img src="./icons/alert.svg" alt="" />
+                            {imagesSources.map((item) => (
+                                <img src={item} alt="" />
+                            ))}
                         </div>
                     </div>
-                    <p className={styles.description}>“Şair, şiirlerinde hava alacak boşluk bırakmıyor, 
-                    her şeyi söylüyor. Okuyucunun adına da kendisi konuşuyor. Bunun için dizleri hayalinizi 
-                    perdeliyor, soluğunuzu kesiyor, sizi boğuyor.”</p>
-                    <p className={styles.question}>Bu parçada geçen “hava alacak boşluk bırakmamak” sözüyle 
-                    anlatılmak istenen aşağıdakilerden hangisidir?</p>
+                    <p className={styles.description}>{questionData[currentNumber-1].description}</p>
+                    <p className={styles.question}>{questionData[currentNumber-1].question}</p>
                     <Radio.Group onChange={onChange} value={responseValue}>
                         <Space direction="vertical">
-                            <Radio value={'A'} className={styles.radio}>A- Gece oldu, ışıklar yandı, herkes kendi kabuğuna çekildi</Radio>
-                            <Radio value={'B'} className={styles.radio}>B- Akşama kadar güneş altında kalınca kolları yanmış</Radio>
-                            <Radio value={'C'} className={styles.radio}>C- Odamız yaz günleri çinko damın altında yanar durur</Radio>
-                            <Radio value={'D'} className={styles.radio}>D- Annem, biz temizliği bitirmeden eve gelirse yandık.{responseValue === 4 ? <Input style={{ width: 100, marginLeft: 10 }} /> : null}
-                            </Radio>
+                            {optionLetters.map((item, index) => (
+                                <Radio value={item} className={styles.radio}>{questionData[currentNumber-1].options[index].optionDescripton}</Radio>
+                            ))}
                         </Space>
                     </Radio.Group>
                 </form>
+            </div>
+            <div className={styles.prevNextWrapper}>
+                {antButton(<LeftOutlined />, ()=>previousQuestion(), "Önceki Soru")}
+                {antButton(<RightOutlined />, ()=>nextQuestion(), "Sonraki Soru")}
             </div>
         </div>
     );
