@@ -1,12 +1,20 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-function TestButton() {
+function TestButton(props) {
+
+    const listResponse = props.responseList;
+
+    const handleSubmit = (e) => {
+        console.log(("listResponse",listResponse))
+        e.preventDefault();
+    }
+
     return (
-        <div className={styles.buttonWrapper}>
+        <button onClick={()=>handleSubmit} className={styles.buttonWrapper}>
             <img src="./icons/complete.svg" alt="" className={styles.buttonIcon} />
             <p className={styles.buttonText}>Testi Bitir</p>
-        </div>
+        </button>
     );
 }
 

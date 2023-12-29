@@ -1,12 +1,18 @@
+$sandstorm:#F7D54C;
+$brightGrey:#2C3E50;
+
 .buttonWrapper {
+    position: absolute;
+    top: 50px;
+    right: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 50px;
-    margin-left: 20px;
     height: 50px;
-    background-color: #F7D54C;
+    background-color: $sandstorm;
     border-radius: 8px;
+    border: none;
+    cursor: pointer;
 
     .buttonIcon {
         width: 30px;
@@ -15,7 +21,7 @@
     }
 
     .buttonText {
-        color: #2C3E50;
+        color: $brightGrey;
         text-align: right;
         font-family: Manrope;
         font-size: 14px;

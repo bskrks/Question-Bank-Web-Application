@@ -1,56 +1,107 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss'
 import data from '../../questions.json'
+import TestButton from '../TestButton/index.jsx'
 
 import { Radio, Space, Button } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-
+import { useEffect } from 'react';
 
 function TestForm (props) {
 
     const questionData = data.questions;
 
     const [currentNumber, setCurrentNumber] = useState(1);
-    const [responseValue, setResponseValue] = useState(1);
+    const [responseValue, setResponseValue] = useState();
+    const [isChecked, setIsChecked] = useState(responseValue);
+    const [savedResponses, setSavedResponses] = useState([]);
     
     const imagesSources = ["./icons/brush.svg","./icons/zoom-in.svg","./icons/zoom-out.svg","./icons/alert.svg"];
     const optionLetters = ["A", "B", "C", "D", "E"]; 
 
     const antButton = (icon, clickFunc, text) => {
         return (<Button
-                type="primary"
-                icon={icon}
-                onClick={clickFunc}
-                className={styles.prevNextButton}
+                    type="primary"
+                    icon={icon}
+                    onClick={clickFunc}
+                    className={styles.prevNextButton}
                 >
                     {text}
                 </Button>);
     }
 
     const previousQuestion = () =>{
+        const resObj = {
+            name: `${responseValue}`,
+            resNumber: `${currentNumber}`
+        }
+
+        if(savedResponses.length === 0) {
+            setSavedResponses(savedResponses => [...savedResponses, resObj]);
+        }
+                
         if(currentNumber > 1) {
             setCurrentNumber(currentNumber-1);
         }else if(currentNumber === 1) {
             setCurrentNumber(1);
         }
+
+        setIsChecked(false);
     }
 
-    const nextQuestion = () =>{
+    const nextQuestion = () => {
+        let sameQuestion = false;
+
+        const resObj = {
+            name: `${responseValue}`,
+            resNumber: `${currentNumber}`
+        }
+        
         if(currentNumber < 10) {
             setCurrentNumber(currentNumber+1);
-        }else if(currentNumber == 10) {
+        }else if(currentNumber === 10) {
             setCurrentNumber(1);
         }
+
+        if(savedResponses.length === 0) {
+            setSavedResponses(savedResponses => [...savedResponses, resObj]);
+        }  if(savedResponses.length > 0) {
+            savedResponses.map((item, index) =>  {
+                if(+item.resNumber === currentNumber) {
+                    let newArr = [...savedResponses];
+                    newArr[index] = resObj;
+                    sameQuestion = true;
+                
+                    setSavedResponses(newArr);
+                }
+            })
+            if(sameQuestion === false) {
+                setSavedResponses(savedResponses => [...savedResponses, resObj]);
+            }
+        }
+        setIsChecked(false);
     }
 
+    useEffect(() => {
+        props.resFunc(savedResponses);
+      }, [props, savedResponses]);
+
     const onChange = (e) => {
-        console.log('radio checked', e.target.value);
         setResponseValue(e.target.value);
-        props.resFunc(e.target.value);
+        setIsChecked(e.target.value);
     };
 
-    const handleSubmit = async(e) => {
-        console.log("e", e);
+    const handleSubmit = (e) => {
+        const listObj = Object.assign({}, savedResponses); 
+        const fileData = JSON.stringify(listObj);
+        const blob = new Blob([fileData], {type: "text/plain"});
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.download = 'answersFile.json';
+        link.href = url;
+        link.click();
+
+        e.preventDefault();
     }
 
     return (
@@ -73,13 +124,16 @@ function TestForm (props) {
                     </div>
                     <p className={styles.description}>{questionData[currentNumber-1].description}</p>
                     <p className={styles.question}>{questionData[currentNumber-1].question}</p>
-                    <Radio.Group onChange={onChange} value={responseValue}>
+                    <Radio.Group onChange={onChange} value={isChecked}>
                         <Space direction="vertical">
                             {optionLetters.map((item, index) => (
-                                <Radio value={item} className={styles.radio}>{questionData[currentNumber-1].options[index].optionDescripton}</Radio>
+                                <Radio value={item} defaultChecked={isChecked} className={styles.radio}>{questionData[currentNumber-1].options[index].optionDescripton}</Radio>
                             ))}
                         </Space>
                     </Radio.Group>
+                    <TestButton 
+                        responseList={savedResponses}
+                    />
                 </form>
             </div>
             <div className={styles.prevNextWrapper}>

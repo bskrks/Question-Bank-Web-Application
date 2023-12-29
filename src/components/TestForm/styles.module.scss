@@ -1,9 +1,14 @@
+$darkJungleGreen:#1E2029;
+$brightGrey:#2C3E50;
+$whiteColor:#FFF;
+$seashell: #EDF2F4;
+
 .formWrapper {
     margin-left: 130px;
 
     .titleWrapper {
         .title {
-            color: #1E2029;
+            color: $darkJungleGreen;
             font-family: Manrope;
             font-size: 24px;
             font-style: normal;
@@ -17,7 +22,7 @@
         width: 800px;
         height: 500px;
         border-radius: 10px;
-        background: var(--light, #FFF);
+        background: var(--light, $whiteColor);
         box-shadow: 0px 12px 50px 0px rgba(0, 0, 0, 0.04);
         padding: 20px;
 
@@ -39,11 +44,11 @@
                 border-radius: 5px;
                 padding: 5px 8px 7px;
                 height: 28px;
-                background-color: #2C3E50;
+                background-color: $brightGrey;
     
                 .questionNumberText {
                     margin: 0;
-                    color: #FFF;
+                    color: $whiteColor;
                     text-align: center;
                     font-family: Manrope;
                     font-size: 12px;
@@ -55,7 +60,7 @@
         }
 
         .description, .question {
-            color: #2C3E50;
+            color: $brightGrey;
             font-family: Manrope;
             font-size: 18px;
             font-style: normal;
@@ -71,7 +76,7 @@
         }
 
         .radio {
-            color: #2C3E50;
+            color: $brightGrey;
             font-family: Manrope;
             font-size: 16px;
             font-style: normal;
@@ -86,11 +91,11 @@
         margin-top: 20px;
 
         .prevNextButton {
-            background-color: #EDF2F4;
+            background-color: $seashell;
             color: black;
             border-radius: 10px;
             box-shadow: none;
-            color: #2C3E50;
+            color: $brightGrey;
             text-align: center;
             font-family: Manrope;
             font-size: 14px;

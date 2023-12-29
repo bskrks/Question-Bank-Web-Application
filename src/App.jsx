@@ -5,18 +5,19 @@ import SideBar from './components/SideBar/index.jsx';
 import AnswerList from './components/AnswerList/index.jsx';
 
 function App() {
-  const [response, setResponse] = useState();
+  const [responseArray, setResponseArray] = useState();
 
-  const responseFunction  = (data) => {
-    setResponse(data);
-    console.log("response",data);
+  const responseFunction  = (responseFunction) => {
+    setResponseArray(responseFunction);
   }
 
   return (
     <div className="app">
       <SideBar />
       <TestForm  resFunc={responseFunction} />
-      <AnswerList res = {response} />
+      <AnswerList 
+        res = {responseArray}
+      />
     </div>
   );
 }

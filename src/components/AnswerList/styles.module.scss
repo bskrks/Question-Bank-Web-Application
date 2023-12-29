@@ -1,3 +1,6 @@
+$darkJungleGreen:#1E2029;
+$blueGrey:#607B96;
+
 .testWrapper {
     display: flex;
     flex-direction: column;
@@ -28,7 +31,7 @@
 
                 .title {
                     margin: 0;
-                    color: #1E2029;
+                    color: $darkJungleGreen;
                     font-family: Manrope;
                     font-size: 16px;
                     font-style: normal;
@@ -38,7 +41,7 @@
         
                 .total {
                     margin: 0;
-                    color: #607B96;
+                    color: $blueGrey;
                     font-family: Manrope;
                     font-size: 12px;
                     font-style: normal;
@@ -51,6 +54,12 @@
         .list {
             padding: 0;
 
+            .questionButton {
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
             .options {
                 display: flex;
                 align-items: center;
@@ -61,7 +70,7 @@
                 background: rgba(3, 169, 241, 0.07);
             
                 .number {
-                    color: #1E2029;
+                    color: $darkJungleGreen;
                     font-family: Manrope;
                     font-size: 14px;
                     font-style: normal;
@@ -80,10 +89,6 @@
                     width: 30px;
                     height: 30px;
                     margin: 10px 10px 10px 0;
-                }
-        
-                .option:last-child {
-                    margin-right: 0;
                 }
             }
         }

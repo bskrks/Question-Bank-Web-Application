@@ -1,6 +1,5 @@
 import React from 'react';
 import SwitchBox from '../SwitchBox/index.jsx';
-import TestButton from '../TestButton/index.jsx'
 
 import data from '../../questions.json'
 
@@ -19,17 +18,11 @@ import "@fontsource/manrope";
 import styles from './styles.module.scss'
 
 function AnswerList(props) {
-    const response = props?.res ;
-
+    const response = props?.res;
     const responseOptions = ["A", "B", "C", "D", "E"];
-    const unselectedSources = [unselectedA, unselectedB, unselectedC, unselectedD, unselectedE];
-    const selectedSources = ["selectedA","selectedB","selectedC","selectedD","selectedE"];
 
-    const filteredOptions = responseOptions.filter((item) => item !== response);
+    const numberOfQuestions = new Array(10).fill(null).map((_, i) => i + 1);
 
-    console.log("filteredOptions",filteredOptions);
-
-    console.log("response buse ", response)
     const selectedImg = {
         "A" : selectedA,
         "B" : selectedB,
@@ -50,7 +43,6 @@ function AnswerList(props) {
         <div className={styles.testWrapper}>
             <div className={styles.buttonWrapper}>
                 <SwitchBox />
-                <TestButton />
             </div>
             <div className={styles.listWrapper}>
                 <div className={styles.lessonWrapper}>
@@ -61,23 +53,25 @@ function AnswerList(props) {
                     </div>
                 </div>
                 <ul className={styles.list}>
-                    {data.questions.map((item,i) => (
-                        <li className={styles.options}>
-                            <p className={styles.number}>{i+1}.Soru</p>
-                            {/* {filteredOptions.map((item) => {
-                                response ? <img src={selectedImg[response]} alt="" className={styles.option} /> : 
-                                            <img src={unselectedImg[item]} alt="" className={styles.option} />})
-                            } */}
-                            {
-                                responseOptions.map((item) => {
-                                    if(item !== response) {
-                                        return (<img src={unselectedImg[item]} alt="" className={styles.option} />)
-                                    } else if(item === response){
-                                        return (<img src={selectedImg[response]} alt="" className={styles.option} />)
-                                    }
-                                })
-                            }
-                        </li>
+                    {numberOfQuestions.map((item,i) => (
+                        <button className={styles.questionButton}>
+                            <li className={styles.options}>
+                                <p className={styles.number}>{i+1}.Soru</p>
+                                {
+                                    responseOptions.map((opt) => {
+                                        if(response?.length > 0 && response?.[i]?.resNumber == item  ) {
+                                            if(response?.[i]?.name === opt) {
+                                                return <img src={selectedImg[response?.[i]?.name]} alt="" className={styles.option} />
+                                            } else {
+                                                return <img src={unselectedImg[opt]} alt="" className={styles.option} />
+                                            }
+                                        } else {
+                                            return <img src={unselectedImg[opt]} alt="" className={styles.option} />
+                                        }
+                                    })
+                                }
+                            </li>
+                        </button>
                     ))}
                 </ul>
             </div>
